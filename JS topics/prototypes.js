@@ -1,5 +1,8 @@
-// Advantage - the created function is loaded only once in the memory
-
+/**
+ * Prototype
+ * It it used to add a propery to an existing object/function
+ Advantage - the created function is loaded only once in the memory
+*/
 function Person(name) {
     this.name = name;
 
@@ -7,12 +10,11 @@ function Person(name) {
     //     return this.name;
     // }
 }
-
-
-var p1 = new Person('Sakshay');
-
 Person.prototype.getName = function() {
     return this.name;
 }
+
+
+var p1 = new Person('Sakshay');
 
 console.log(p1.getName());
