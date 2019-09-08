@@ -11,7 +11,6 @@
  * POP
  * CONCAT
  * LENGTH
- * 
  * SPLICE: Delete an element at a particular index, replace a particular index or add a particular element at a particular index
  */
 
