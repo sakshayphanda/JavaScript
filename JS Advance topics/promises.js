@@ -36,6 +36,7 @@ const C = (result) => {
     })
 }
 
+//Method 1
 
 A().then((message) => { 
     return B(message);
@@ -44,3 +45,20 @@ A().then((message) => {
 }).then((finalMessage) => {
     console.log(finalMessage + 'End')
 })
+
+
+//Method 2
+
+async function result() {
+    const responseA =  await A();
+    if(responseA){
+        const responseB = await B(responseA);
+        if(responseB){
+            const responseC = await C(responseB);
+            if(responseC)
+            console.log(responseC);
+        }
+    }
+}
+
+result();
