@@ -12,52 +12,63 @@
 //     console.log(message, ' then');
 // }).catch((message)=> {
 //     console.log(message, ' catch');
-    
+
 // })
 
 
 // Nested Promises
 
 const A = () => {
-    return new Promise((resolve, reject)=> {
+    return new Promise((resolve, reject) => {
         resolve('A => ');
     })
 }
 
 const B = (result) => {
-    return new Promise((resolve, reject)=> {
+    return new Promise((resolve, reject) => {
         resolve(result + 'B => ');
     })
 }
 
 const C = (result) => {
-    return new Promise((resolve, reject)=> {
-        resolve(result + 'C => ');
+    return new Promise((resolve, reject) => {
+        const state = false;
+        if (state) {
+            resolve(result + 'C => PASS');
+        } else {
+            reject(result + 'C => ERROR');
+        }
     })
 }
 
 //Method 1
 
-A().then((message) => { 
+A().then((message) => {
     return B(message);
 }).then((message) => {
     return C(message)
 }).then((finalMessage) => {
-    console.log(finalMessage + 'End')
-})
+    console.log(finalMessage)
+}).catch((err) => {
+    console.log(err);
+});
 
 
 //Method 2
 
 async function result() {
-    const responseA =  await A();
-    if(responseA){
-        const responseB = await B(responseA);
-        if(responseB){
-            const responseC = await C(responseB);
-            if(responseC)
-            console.log(responseC);
+    try {
+        const responseA = await A();
+        if (responseA) {
+            const responseB = await B(responseA);
+            if (responseB) {
+                const responseC = await C(responseB);
+                if (responseC)
+                    console.log(responseC);
+            }
         }
+    } catch (error) {
+        console.log(error);
     }
 }
 
