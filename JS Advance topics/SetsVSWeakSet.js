@@ -9,5 +9,6 @@ weakSet.add(obj);
 console.log(set, weakSet.has(obj));
 
 obj = null;
+
 console.log(set, weakSet.has(obj));
 
