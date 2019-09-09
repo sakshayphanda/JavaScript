@@ -18,10 +18,8 @@ console.log('***********Objects are referenced*********');
 console.log('MAP: ', map);
 console.log('WEAKMAP: ', weakMap.get(tempObject2));
 
-
 tempObject2 = null;
 tempObject1 = null;
-
 
 console.log('*************Objects are de-referenced********');
 console.log('MAP: ', map);

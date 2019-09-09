@@ -59,14 +59,9 @@ A().then((message) => {
 async function result() {
     try {
         const responseA = await A();
-        if (responseA) {
-            const responseB = await B(responseA);
-            if (responseB) {
-                const responseC = await C(responseB);
-                if (responseC)
-                    console.log(responseC);
-            }
-        }
+        const responseB = await B(responseA);
+        const responseC = await C(responseB);
+        console.log(responseC);
     } catch (error) {
         console.log(error);
     }
