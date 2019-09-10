@@ -10,6 +10,7 @@
  * defined in the outerFunction scope. 
  * In addition, the function defined inside another function as a closure will 
  * have access to variables declared in the global namespace.
+ * -----
  */
 var globalVar = "abc"; 
 
