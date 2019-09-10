@@ -13,3 +13,9 @@ console.log(5 + '5'); // both considered as strings
 
 //false = 0
 //true = 1
+
+
+console.log('3' + 5 + 5);
+
+console.log(true + 1); // 2
+console.log(true + 'sakshay'); // 'truesakshay'
