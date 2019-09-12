@@ -27,15 +27,30 @@ function outerFunction (outerArg) { // begin of scope outerFunction
             "outerFuncVar = " + outerFuncVar + "\n" +
             "innerArg = " + innerArg + "\n" +
             "innerFuncVar = " + innerFuncVar + "\n" +
-            "globalVar = " + globalVar);
- 
+            "globalVar = " + globalVar); 
     }// end of scope innerFunction)(5); 
     // Pass 5 as parameter 
 
-    innerFunction('inner');
+    const inner = 5;
+    return innerFunction(inner);
 
 } // end of scope outerFunction )(7); 
 // Pass 7 as parameter
 
+const outer = 10;
+// outerFunction(outer);
 
-outerFunction('outer');
+
+function closureParent (i) {
+   function closure () {
+       console.log(++i);
+   }
+
+   return closure;
+}
+
+clos = closureParent(1);
+
+clos();
+clos();
+clos();
