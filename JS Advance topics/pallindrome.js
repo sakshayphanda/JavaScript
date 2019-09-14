@@ -4,14 +4,27 @@
  * Eg: exe
  */
 
- function pallindromeOfAString(str) {
-  let temp = '';
-  
-  temp = str.split().reverse().join();
-  console.log(temp);
- }
+function pallindromeOfAString(str) {
+    let temp = [];
+    let tempString = '';
+    //METHOD 1
+    // temp = str.split('').reverse().join('');
+    //   console.log(temp, str);
 
- const isPallindrome = pallindromeOfAString('exe');
+    //METHOD 2
+    for(let i =0; i< str.length; i ++) {
+        temp.unshift(str.charAt(i));
+    }
 
- console.log(isPallindrome);
- 
+    tempString = temp.join('');
+
+    if (tempString === str) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const isPallindrome = pallindromeOfAString('exxxeew');
+
+console.log(isPallindrome);
