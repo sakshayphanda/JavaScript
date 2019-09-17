@@ -12,7 +12,7 @@ function mostFrequentNumberInArray(arr) {
                 obj[item] += 1;
             } 
 
-            if(obj[item] > max ) {
+            if(obj[item] > obj[max] ) {
                 max = item;
             }
         }
