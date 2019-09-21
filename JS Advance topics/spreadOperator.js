@@ -13,3 +13,11 @@
 
 let arr2 = ['a', 'b', ...arr1, 'c', 'd'];
 console.log(arr2);
+
+/**
+ * It can also be used to change the reference of a particular array
+ */
+
+ let arr3 = [...arr1];
+
+ console.log(arr3 === arr1, arr1, arr3);
