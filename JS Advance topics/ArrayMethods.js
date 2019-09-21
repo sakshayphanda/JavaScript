@@ -16,13 +16,68 @@
 const array = ['one', 'two', 'three', 'four'];
 //'Deletes a particular index'
  array.splice(2,1);
- console.log(array);
+// console.log(array);
 
 //'Replaces a particular index with a new value'
  array.splice(2,1, 'Replaced Value');
- console.log(array);
+ //console.log(array);
 
  // Adds a new Value to an index
  array.splice(2, 0, 'New value');
- console.log(array);
+ //console.log(array);
 
+
+/**
+ * Looping through arrays 
+ * array.map()
+ * array.forEach()
+ * array.filter()
+ * array.every()
+ */
+
+
+ let arr = [1,2,3, 4, 6];
+
+ arr.forEach(
+     (element, index, array)=> {
+        // console.log(element, index, array);
+
+         /**
+          * OUTPUT
+          * 1 0 [ 1, 2, 3, 4, 6 ]
+            2 1 [ 1, 2, 3, 4, 6 ]
+            3 2 [ 1, 2, 3, 4, 6 ]
+            4 3 [ 1, 2, 3, 4, 6 ]
+            6 4 [ 1, 2, 3, 4, 6 ]
+          */
+     }
+ );
+
+
+arr = arr.map((element) => {
+     return element + 'Mapped';
+ });
+
+ // Filter returns an element if the condition is true otherwise it just skips that element
+ arr2 = arr.filter((element) => {
+    if(element === '1Mapped'){
+        return true;
+    }
+});
+
+
+//arr.every returns a boolean based on the condition,
+// if every element of an array matches the condtion it returns true else false;
+var passed = [12, 5, 8, 130, 44]
+
+passed = passed.every(element => {
+    return (element >= 5);
+});
+
+  
+
+ console.log(arr, arr2, passed);
+
+
+
+ 
