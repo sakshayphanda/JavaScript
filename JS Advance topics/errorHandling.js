@@ -8,16 +8,18 @@ const convertToRs = (dollar) => {
 if(typeof dollar === 'number') {
  return dollar * 64;
 } else {
-    throw Error('Should be a number');
+    throw Error('ERROR!!!!Should be a number');
 }
 }
 
 
 try {
-const myValue = convertToRs('five');
+const myValue = convertToRs('2');
 console.log(myValue);
 } catch(error) {
     console.log(error.message);
+} finally {
+    console.log('finally block');
 }
 
 
