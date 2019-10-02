@@ -6,6 +6,10 @@
  * O(n) - linear - Linear Search
  * O(n^2) - quadratic - Selection sort,
  * O(2^n) - exponential
+ * 
+ * Combining complexities
+ * O(n * m) - Ex: Iterate through each char in a array of strings. 
+ * O(n log(n)) - linearithemic or linear logrithimic
  */
 
 
@@ -59,3 +63,6 @@ array = [...set];
 console.log('Method2', array);
 
 
+/**
+ * Quadratic
+ */
