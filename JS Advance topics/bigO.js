@@ -4,7 +4,7 @@
  * O(1) - constant
  * O(log(n)) - logarithmic - Binary Search
  * O(n) - linear - Linear Search
- * O(n^2) - quadratic - Selection sort,
+ * O(n^2) - quadratic - Selection sort, Bubble Sort
  * O(2^n) - exponential
  * 
  * Combining complexities
