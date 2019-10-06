@@ -1,9 +1,11 @@
 /**
  * Selection Sorting
  * 
+ * COMPLEXITY : O(n^2)
+ * 
  * Find the minimum element in an array and swap it with the first element
  * Now 0th index has the lowest value
- * 
+ * there will be 2 loops i and j . j will always be one ahead of i
  */
 
 
