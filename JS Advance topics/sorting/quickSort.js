@@ -2,13 +2,10 @@
  * QUICK SORT
  * 
  * Divide and Conquer Algorithm
- * 
  * its a recursive alogrithm
- *   
  * First, select an element as a PIVOT element (any random index)
  * choose a variable which is pointing to the first element 
  * choose another variable which is pointing to the last element
- * 
  * Item to the left of pivot are smaller than the PIvot and items to the right are larger.
  * 
  * Here are the steps to perform Quick sort that is being shown with an example [5,3,7,6,2,9].
