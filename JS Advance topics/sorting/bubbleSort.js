@@ -11,16 +11,29 @@
 
 let arr = [2, 4, 5, 1, -2, 8, 3];
 let temp;
+let maxArrIndex = arr.length - 1;
 
-for (let i = 0; i < arr.length; i++) {
-    for(let j = i+1; j < arr.length; j++) {
-        if(arr[i]> arr[j]) {
-            temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+for (let i = 0; i < maxArrIndex; i++) {
+    for (let j = 0; j < maxArrIndex - i; j++) {
+        // To sort in descending order, change > to < in this line.
+        if (arr[j] > arr[j + 1]) {
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
         }
     }
 }
+
+
+// for (let i = 0; i < arr.length; i++) {
+//     for(let j = i+1; j< arr.length; j++) {
+//         if(arr[i]> arr[j]) {
+//             temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//         }
+//     }
+// }
 
 
 console.log(arr);

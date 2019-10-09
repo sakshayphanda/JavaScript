@@ -2,6 +2,11 @@
  * QUICK SORT
  * 
  * Divide and Conquer Algorithm
+ * 
+ * 
+ * complexity: O(n log(n))
+ * 
+ * 
  * its a recursive alogrithm
  * First, select an element as a PIVOT element (any random index)
  * choose a variable which is pointing to the first element 
@@ -52,6 +57,7 @@ function partition(arr, lb, ub) {
             start++;
             end--;
         }
+
     }
     return start;
 }
