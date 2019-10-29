@@ -12,9 +12,11 @@ function onClick (callback) {
 }
 
 
-let clickFunction = (str) => {
-    console.log(str);
-};
+// let clickFunction = (str) => {
+//     console.log(str);
+// };
 
-onClick(clickFunction);
+onClick((str) => {
+    console.log(str);
+});
 
