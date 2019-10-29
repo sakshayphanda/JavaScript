@@ -36,8 +36,8 @@ const array = ['one', 'two', 'three', 'four'];
  * array.every() //returns true if alll the elements in an array satisfies the condtion
  * array.some() //returns true if any one element satisfies the condition
  * array.find() // returns first element if any element in an array satisfies the condition
+ * array.reduce() // returns the sum of all the elements of an array
  */
-
 
  let arr = [1,2,3, 4, 6];
 
