@@ -36,10 +36,7 @@ class LinkedList {
         if(!this.head) {
             console.log('List is empty');
         } else {
-     //  console.log(JSON.stringify(this.head));
-            let current = this.head;
-          //  console.log(current.data);
-            
+            let current = this.head;            
             while(current.next) {
                 console.log(current.data);
                 current = current.next;
