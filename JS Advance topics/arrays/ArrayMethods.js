@@ -9,6 +9,7 @@
  * POP
  * CONCAT
  * LENGTH
+ * INCLUDES
  * SPLICE: Delete an element at a particular index, replace a particular index or add a particular element at a particular index
  */
 
@@ -29,10 +30,12 @@ const array = ['one', 'two', 'three', 'four'];
 
 /**
  * Looping through arrays 
- * array.map()
- * array.forEach()
- * array.filter()
- * array.every()
+ * array.map() // to modify an existing array 
+ * array.forEach() // to iterate through all the elements of an array
+ * array.filter() // returns a new array of elements which satisfies the condition
+ * array.every() //returns true if alll the elements in an array satisfies the condtion
+ * array.some() //returns true if any one element satisfies the condition
+ * array.find() // returns first element if any element in an array satisfies the condition
  */
 
 
