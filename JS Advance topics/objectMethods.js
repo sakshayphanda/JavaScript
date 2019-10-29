@@ -2,7 +2,7 @@
  * Object methods
  * .keys()
  * .values()
- * .enteries()
+ * .entries()
  * .freeze() - cannot modify an existing object
  * .seal() = only modify the existing keys in an object but cannot add more properties
  * .defineProperty(objName, 'key', {

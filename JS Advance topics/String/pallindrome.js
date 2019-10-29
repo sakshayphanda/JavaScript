@@ -7,8 +7,9 @@
 function pallindromeOfAString(str) {
     let temp = [];
     let tempString = '';
+    
     //METHOD 1
-    // temp = str.split('').reverse().join('');
+    temp = str.split('').reverse().join('');
     //   console.log(temp, str);
 
     //METHOD 2
