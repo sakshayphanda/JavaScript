@@ -2,7 +2,7 @@ try {
     console.log('A');
     console.log('B');
     throw 'invalid';
-    console.log('C');
+    console.log('C wont execute since it is written after throw');
 } catch(exception) {
     console.log(`catch block: ${exception}`);
 } finally {
