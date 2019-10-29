@@ -7,6 +7,8 @@
  * 
  * In this , we compare the first two indexes and swap with the second one is smaller than the first one.
  * Then we, check the second and third and do the same if the third one is smaller than the first one.
+ * 
+ * it makes sure that the largest element is at the last at the end of every loop.
  */
 
 let arr = [2, 4, 5, 1, -2, 8, 3];
@@ -24,4 +26,6 @@ for (let i = 0; i < maxArrIndex; i++) {
     }
 }
 
+
 console.log(arr);
+

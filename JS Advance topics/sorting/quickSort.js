@@ -76,4 +76,4 @@ function quickSort(arr, lb, ub) {
     return arr;
 }
 var sortedArray = quickSort(arr, lb, ub);
-console.log(sortedArray); //prints [2,3,5,6,7,9]
+console.log(sortedArray);
