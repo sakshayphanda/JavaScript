@@ -13,7 +13,7 @@ Array.prototype.myFilter = function(func) {
 
 
 arr = arr.myFilter((item) => {
-    if(item < 3) {
+    if(item < 1) {
         return true;
     }
 });
