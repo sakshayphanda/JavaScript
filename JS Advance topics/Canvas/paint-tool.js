@@ -1,10 +1,15 @@
 window.addEventListener("load", () => {
     let canvas = document.querySelector('canvas');
+    let clearAllButton = document.getElementById('clear');
     let context = canvas.getContext('2d');
     let painting = false;
 
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+
+    clearAllButton.addEventListener('click', () => {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    });
     console.log(window);
 
     context.strokeStyle = "blue";
