@@ -18,50 +18,37 @@
 </body>
 </html>
 <style>
-    body {
-    background: #DCF5FF;
-    margin: 0;
-    height: 100vh;
-    display: grid;
-    justify-items: center;
-    align-items:center;
-    font-family: 'Nunito', 'sans-serif';
-}
+    .container {
+        align-items: center;
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        justify-items: center;
+    }
+    .inner {
+        background: rgb(54, 189, 212);
+        padding: 10px;
+        color: white;
+        width: 250px;
+        position: relative;
+        border-radius: 10px;
+        transition: all .5s ease-in-out;
+        clip-path: circle(10% at 90% 15%);
+    }
 
+    .inner span {
+        right: 24px;
+        top: 16px;
+        transition: color .5s;
+        position: absolute;
+    }
 
-.inner {
-    background: rgb(9, 201, 153);
-    padding: 1em;
-    border-radius: 10px;
-    width: 250px;
-    clip-path: circle(10% at 90% 20%);
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-}
+    .inner:hover {
+        clip-path: circle(75%);
+        background: rgb(111, 214, 111);
+    }
 
-.inner:hover {
-    clip-path: circle(75%);
-    background: #00B6FF;
-}
-
-.inner h1 {
-    color: white;
-    margin: 0;
-}
-
-.inner p {
-    color: white;
-    font-size: .8rem;
-}
-.inner span {
-    float: right;
-    color: white;
-    font-weight: bold;
-    transition: color .5s;
-    position: relative;
-    margin-right: 4%;
-}
-.inner:hover span {
-    color: rgba(255,255,255,0)
+    .inner:hover span {
+        color: rgba(255,255,255,0)
 }
 </style>
