@@ -32,8 +32,9 @@
         width: 250px;
         position: relative;
         border-radius: 10px;
-        transition: all .5s linear;
+        transition: all .5s ease-in-out;
         clip-path: circle(10% at 90% 15%);
+        /* clip-path: inset(0 0 75% 75%); */
     }
 
     .inner span {
@@ -44,7 +45,8 @@
     }
 
     .inner:hover {
-        clip-path: circle(75%);
+        clip-path: circle(100%);
+        /* clip-path: inset(0 0 0 0); */
         background: rgb(111, 214, 111);
     }
 
