@@ -41,7 +41,7 @@ const outer = 10;
 // outerFunction(outer);
 
 
-function closureParent (i) {
+function closureParent (i) {    
    function closure () {
        console.log(++i);
    }
