@@ -11,8 +11,8 @@
  * We can also assign values to an existing array using spread operator
  */
 
-let arr2 = ['a', 'b', ...arr1, 'c', 'd'];
-console.log(arr2);
+const arr = ['a', 'b', ...arr1, 'c', 'd'];
+console.log(arr);
 
 /**
  * It can also be used to change the reference of a particular array

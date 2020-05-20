@@ -8,6 +8,7 @@
  * CONCAT
  * LENGTH
  * INCLUDES
+ * slice
  * SPLICE: Delete an element at a particular index, replace a particular index or add a particular element at a particular index
  */
 
@@ -35,6 +36,10 @@ const array = ['one', 'two', 'three', 'four'];
  * array.some() //returns true if any one element satisfies the condition
  * array.find() // returns first element if any element in an array satisfies the condition
  * array.reduce() // returns the sum of all the elements of an array
+ * array.findIndex() // returns the index of the element in an array that satisfies the condition
+ * 
+ * array.flat()
+ * array.flatMap()
  */
 
  let arr = [1,2,3, 4, 6];
