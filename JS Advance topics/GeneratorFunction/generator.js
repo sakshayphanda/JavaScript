@@ -13,3 +13,4 @@ function * generatorFunction() { // Line 1
 // for(obj of generatorObject) {
 //     console.log(obj);
 // }
+
