@@ -1,43 +1,41 @@
 /**
  * Type of bigO notations
- * 
+ *
  * O(1) - constant
- * O(log(n)) - logarithmic - Binary Search
+ * O(log(n)) - logarithmic - Binary Search, basically when division takes place its log(n)
  * O(n) - linear - Linear Search
  * O(n^2) - quadratic - Selection sort, Bubble Sort
  * O(2^n) - exponential
- * 
+ *
  * Combining complexities
- * O(n * m) - Ex: Iterate through each char in a array of strings. 
+ * O(n * m) - Ex: Iterate through each char in a array of strings.
  * O(n log(n)) - linearithemic or linear logrithimic
  */
 
+/** CONSTANT O(1) examples
+ * Find an even or odd number
+ * Remove last item from an array
+ * Append an item to an array*/
 
- /** CONSTANT O(1) examples
-  * Find an even or odd number
-  * Remove last item from an array 
-  * Append an item to an array*/
+const number = 10;
 
-  const number = 10;
+if (number % 2 === 0) {
+	// console.log('The number is even');
+} else {
+	// console.log('The number is odd');
+}
 
-  if ((number % 2) === 0) {
-     // console.log('The number is even');
-  } else {
-     // console.log('The number is odd');
-  }
-
-/**Linear Examples 
+/**Linear Examples
  * Where the input size decides the performance
- * 
+ *
  * Upper case a string of n characters
  * Copy an array
  * Insert an item at the middle of an array
- * Remove an item from an array 
+ * Remove an item from an array
  * Remove duplicates from an array
  */
 
-
-let array = [1, 3 ,3 ,3, 1, 1, 2];
+let array = [1, 3, 3, 3, 1, 1, 2];
 const obj = {};
 
 // Method 1
@@ -50,18 +48,15 @@ const obj = {};
 // }
 // );
 
-
 // console.log('Method1', array.sort(), obj);
 
-//Method 2 
+//Method 2
 
 let set = new Set(array);
 
 array = [...set];
 
-
 console.log('Method2', array);
-
 
 /**
  * Quadratic
