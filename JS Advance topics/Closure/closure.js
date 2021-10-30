@@ -5,8 +5,7 @@
  * Variables inside its scope
  * Variables inside the parent function
  * 
- * innerFunction is closure that is defined inside 
- * outerFunction and has access to all variables declared and 
+ * innerFunction is closure that is defined inside outerFunction and has access to all variables declared and 
  * defined in the outerFunction scope. 
  * In addition, the function defined inside another function as a closure will 
  * have access to variables declared in the global namespace.

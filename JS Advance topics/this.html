@@ -1,0 +1,65 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			document.write('this -->', this);
+			document.write('<br>');
+			document.write('this === window --> ', this === window);
+			document.write('<br>');
+			document.write('this === globalThis --> ', this === globalThis);
+
+			const obj = {
+				name: 'sakshay',
+				method: function () {
+					document.write(
+						'<br> Normal Function inside obj --> ',
+						this.name
+					); // sakshay (this refers to object here)
+				},
+			};
+
+			obj.method();
+
+			function anotherMethod() {
+				document.write('<br>Normal Function --> ', this); // Global scope // window (this refers to object here)
+			}
+			anotherMethod();
+			function strictMethod() {
+				'use strict';
+				document.write(
+					'<br>Normal Function with use strict --> ',
+					this
+				); // undefined (this refers to object here)
+			}
+			strictMethod();
+
+            const strictMethodArrow = () => {
+				'use strict';
+				document.write(
+					'<br>Arrow Function with use strict --> ',
+					this
+				); // Global (this refers to object here)
+			}
+			strictMethodArrow();
+
+			const obj2 = {
+				name: 'sakshay',
+				method: () => {
+					document.write('<br>Arrow function --> ', this); // outer value of this (this refers to object here)
+				},
+			};
+			obj2.method();
+
+			function MyFunction() {
+                document.write('<br>constructor invocation --> ', this); // logs an instance of myFunction
+				console.log('constructor invocation --> ', this); // logs an instance of myFunction
+			}
+			new MyFunction();
+		</script>
+	</body>
+</html>
