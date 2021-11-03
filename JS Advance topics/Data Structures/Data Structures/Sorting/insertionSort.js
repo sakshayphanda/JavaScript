@@ -2,8 +2,11 @@
  * Insertion Sorting
  *
  * There is no swap involved.
- * We need to insert the small value to the correct place by traversing to the left
- * For less than 10 values. Its the default sorting algo used in Array.sort() method in js by Chrome browser V8 Engine
+ * We need to insert the small value to the correct place by traversing to 
+ * the left
+ * For less than 10 values. 
+ * Its the default sorting algo used in Array.sort() method in js by 
+ * Chrome browser V8 Engine
  */
 
 function insertionSort(arr) {
@@ -13,7 +16,6 @@ function insertionSort(arr) {
         let newIndex = i;
 		for (let j = i-1; j >= 0 && arr[j] > el; j--) {
             count++;
-            console.log(count);
 			if (el < arr[j]) { 
                 newIndex = j; 
                 arr[j+1]=arr[j]; 
