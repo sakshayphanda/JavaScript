@@ -7,11 +7,11 @@
 	</head>
 	<body>
 		<script>
-			document.write('this -->', this);
+			document.write('this -->', this); // global/window
 			document.write('<br>');
-			document.write('this === window --> ', this === window);
+			document.write('this === window --> ', this === window); // true
 			document.write('<br>');
-			document.write('this === globalThis --> ', this === globalThis);
+			document.write('this === globalThis --> ', this === globalThis); // true
 
 			const obj = {
 				name: 'sakshay',
@@ -39,7 +39,7 @@
 			strictMethod();
 
             const strictMethodArrow = () => {
-				'use strict';
+				'use strict'; // doesn't work in case of arrow functions
 				document.write(
 					'<br>Arrow Function with use strict --> ',
 					this
@@ -50,7 +50,7 @@
 			const obj2 = {
 				name: 'sakshay',
 				method: () => {
-					document.write('<br>Arrow function --> ', this); // outer value of this (this refers to object here)
+					document.write('<br>Arrow function --> ', this); // outer value of this (this refers to window here)
 				},
 			};
 			obj2.method();
@@ -60,6 +60,26 @@
 				console.log('constructor invocation --> ', this); // logs an instance of myFunction
 			}
 			new MyFunction();
+
+			const obj4 = {
+				name: 'sakshay',
+				method: () => {
+				  return () => {
+				    	console.log('<br>Arrow function --> ', this); // outer value of this (this refers to window here)
+				  }
+				},
+			};
+			obj4.method()(); // global/window
+
+			const obj4 = {
+				name: 'sakshay',
+				method: function () {
+				  return () => {
+				    	console.log('<br>Arrow function --> ', this); // object
+				  }
+				},
+			};
+			obj4.method()(); // object calling it as we used function syntax.
 		</script>
 	</body>
 </html>
